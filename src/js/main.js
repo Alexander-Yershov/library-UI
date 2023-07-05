@@ -27,4 +27,37 @@ $('button').eq(2).on('click', () => {
 
 // $('.dropdown-toggle').dropdown();
 
+$('#trigger').click(() => $('#trigger').createModal({
+    text: {
+        title: 'Modal title',
+        body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nostrum accusamus tenetur voluptates veniam pariatur animi voluptatem illo placeat labore aspernatur! Recusandae quo quisquam facilis necessitatibus assumenda illum labore optio?'
+    },
+    btns: {
+        count: 3,
+        settings: [
+            [
+                'Close',
+                ['btn-danger', 'mr-10'],
+                true
+            ],
+            [
+                'Save changes',
+                ['btn-success'],
+                false,
+                () => {
+                    alert('Данные сохранены');
+                }
+            ],
+            [
+                'Another btn',
+                ['btn-warning', 'ml-10'],
+                false,
+                () => {
+                    alert('Hello world');
+                }
+            ]
+        ]
+    }
+}));
+
 
